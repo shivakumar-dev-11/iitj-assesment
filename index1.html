@@ -1,6 +1,40 @@
 <!DOCTYPE html>
 <html>
 
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #000000;
+            color: #ffffff;
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        h1 {
+            color: #ffffff;
+
+            font-family: Arial, sans-serif;
+            flex-shrink: 0;
+        }
+
+        flowise-fullchatbot {
+            flex: 1;
+            display: block;
+            min-height: 0;
+            padding-bottom: 90px;
+        }
+    </style>
+</head>
+
 <body>
     <center>
         <h1>My Shopping Assistant</h1>
@@ -12,6 +46,26 @@
         Chatbot.initFull({
             chatflowid: "f773ea0f-29d8-49ae-b084-9bbd55784c92",
             apiHost: "https://cloud.flowiseai.com",
+            theme: {
+                chatWindow: {
+                    backgroundColor: "#111111",
+                    textColor: "#ffffff",
+                    userMessage: {
+                        backgroundColor: "#333333",
+                        textColor: "#ffffff"
+                    },
+                    botMessage: {
+                        backgroundColor: "#1a1a1a",
+                        textColor: "#ffffff"
+                    },
+                    textInput: {
+                        backgroundColor: "#222222",
+                        textColor: "#ffffff",
+                        placeholder: "Type your message...",
+                        sendButtonColor: "#ffffff"
+                    }
+                }
+            }
         })
     </script>
 
